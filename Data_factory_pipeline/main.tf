@@ -14,6 +14,7 @@ resource "azurerm_data_factory" "data_factory" {
   resource_group_name = data.azurerm_resource_group.main.name
   location            = data.azurerm_resource_group.main.location
   tags                = var.tags
+  public_network_enabled = false
 }
 resource "azurerm_data_factory_pipeline" "main" {
   name                = "${var.name == "" ? local.defaultname : var.name}-pipeline"
