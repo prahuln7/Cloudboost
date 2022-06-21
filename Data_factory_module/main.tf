@@ -14,4 +14,5 @@ resource "azurerm_data_factory" "main" {
   resource_group_name = data.azurerm_resource_group.main.name
   location            = data.azurerm_resource_group.main.location
   tags                = var.tags
+  public_network_enabled = false
 }
