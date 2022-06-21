@@ -9,4 +9,7 @@ resource "azurerm_app_service" "appservice" {
     dotnet_framework_version = "v4.0"
   }
 
+  auth_settings {
+    enabled = true
+  }
 }
